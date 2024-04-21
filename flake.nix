@@ -13,10 +13,7 @@
     in {
       devShells.default = pkgs.mkShell {
         packages = with pkgs; [ 
-          vscode-langservers-extracted
           qmk
-          qmk-udev-rules
-          keymapviz
           clang-tools
         ];
       };
