@@ -9,10 +9,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 		          KC_LGUI, QK_GESC,                                            KC_SPC, TO(1)
 	            ),
 	[1] = LAYOUT(
-		          KC_VOLU, KC_VOLD, KC_BRIU, KC_BRID, CW_TOGG,                                KC_MINS, KC_1, KC_2, KC_3, KC_BSPC,
-		          KC_BSLS, KC_SLSH, MT(MOD_LCTL, KC_LPRN), MT(MOD_LSFT, KC_RPRN), KC_QUOT,    KC_EQL, MT(MOD_RSFT, KC_4), MT(MOD_RCTL, KC_5), KC_6, KC_0,
-		          KC_NO, KC_NO, KC_LBRC, KC_RBRC, KC_NO,                                      KC_NO, KC_7, KC_8, KC_9, KC_ENT,
-		          KC_LGUI, TO(3),                                                             TO(2), TO(0)
+		          KC_VOLU, KC_VOLD, KC_BRIU, KC_BRID, CW_TOGG,                 KC_MINS, KC_1, KC_2, KC_3, KC_BSPC,
+		          KC_BSLS, KC_SLSH, SC_LCPO , SC_RSPC, KC_QUOT,                KC_EQL, MT(MOD_RSFT, KC_4), MT(MOD_RCTL, KC_5), KC_6, KC_0,
+		          KC_NO, KC_NO, KC_LBRC, KC_RBRC, KC_NO,                       KC_NO, KC_7, KC_8, KC_9, KC_ENT,
+		          KC_LGUI, TO(3),                                              TO(2), TO(0)
 	            ),
 	[2] = LAYOUT(
 		          KC_F1, KC_F2, KC_F3, KC_F4, KC_F5,                           KC_NO, KC_NO, KC_NO, KC_NO, KC_BSPC,
@@ -21,9 +21,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 		          KC_NO, KC_NO,                                                KC_NO, TO(0)
 	            ),
 	[3] = LAYOUT(
-		          KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,                           KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,
-		          KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,                           KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,
-		          KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,                           KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,
+		          KC_NO, KC_NO, UC(0x0370), UC(0x00AC), UC(0x2194),            KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,
+		          UC(0x2200), UC(0x2203), UC(0x2228), UC(0x2227), UC(0x2192),  KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,
+		          UC(0x2282), UC(0x2283), UC(0x222A), UC(0x2229), UC(0x2208),  KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,
 		          KC_NO, KC_NO,                                                KC_NO, TO(0)
 	            ),
 };
