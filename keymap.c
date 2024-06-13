@@ -2,7 +2,7 @@
 #include <stdint.h>
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
-    // clang-format off
+	// clang-format off
 	[0] = LAYOUT(
 		KC_SCLN, KC_COMM, KC_DOT, KC_P, KC_Z,                        KC_F, KC_G, KC_C, KC_R, KC_L,
 		KC_A, KC_O, MT(MOD_LCTL, KC_E), MT(MOD_LSFT ,KC_U), KC_I,    KC_D, MT(MOD_RSFT,KC_H), MT(MOD_RCTL, KC_T), KC_N, KC_S,
@@ -21,31 +21,34 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 		KC_F11, KC_F12, KC_F13, KC_F14, KC_F15,                      KC_NO, KC_NO, KC_NO, KC_NO, KC_ENT,
 		KC_NO, KC_NO,                                                KC_NO, TO(0)
 	),
-    // clang-format on
+	// clang-format on
 };
 
-void keyboard_post_init_user(void) {
+void
+keyboard_post_init_user(void)
+{
 	rgblight_enable_noeeprom();
 	rgblight_sethsv_noeeprom(HSV_PINK);
 }
 
-layer_state_t layer_state_set_user(layer_state_t state) {
-	switch(biton32(state)) {
-		case 0:
-			rgblight_enable_noeeprom();
-			rgblight_sethsv_noeeprom(HSV_PINK);
-			break;
-		case 1:
-			rgblight_enable_noeeprom();
-			rgblight_sethsv_noeeprom(HSV_TEAL);
-			break;
-		case 2:
-			rgblight_enable_noeeprom();
-			rgblight_sethsv_noeeprom(HSV_YELLOW);
-			break;
-		default:
-			rgblight_disable_noeeprom();
-			break;
+layer_state_t
+layer_state_set_user(layer_state_t state)
+{
+	switch (biton32(state)) {
+	case 0:
+		rgblight_enable_noeeprom();
+		rgblight_sethsv_noeeprom(HSV_PINK);
+		break;
+	case 1:
+		rgblight_enable_noeeprom();
+		rgblight_sethsv_noeeprom(HSV_TEAL);
+		break;
+	case 2:
+		rgblight_enable_noeeprom();
+		rgblight_sethsv_noeeprom(HSV_YELLOW);
+	default:
+		rgblight_disable_noeeprom();
+		break;
 	}
 	return state;
 }
