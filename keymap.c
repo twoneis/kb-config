@@ -29,9 +29,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 	),
 	[4] = LAYOUT(
 		KC_ESC, KC_1, KC_2, KC_3, KC_4,                             KC_NO, KC_NO, KC_NO, KC_NO, KC_BSPC,
-		KC_Q, KC_W, KC_R, KC_T, KC_Y,                               KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,
-		KC_LSFT, KC_LCTL, KC_F, KC_F, KC_B,                         KC_NO, KC_NO, KC_NO, KC_NO, KC_ENT,
-		KC_TAB, KC_SPC,                                             KC_NO, TO(0)
+		KC_Q, KC_W, KC_E, KC_R, KC_T,                               KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,
+		KC_TAB, KC_LSFT, KC_D, KC_F, KC_B,                          KC_NO, KC_NO, KC_NO, KC_NO, KC_ENT,
+		KC_LCTL, KC_SPC,                                            KC_NO, TO(0)
 	)
 	// clang-format on
 };
